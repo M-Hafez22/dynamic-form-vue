@@ -1,6 +1,6 @@
 <template>
   <div class="Result">
-    <h1>Result</h1>
+    <h1>Your Form Input</h1>
   </div>
 </template>
 
