@@ -27,5 +27,12 @@ describe('Renders Home View', () => {
     it('Renders input field for each form item', () => {
         expect(store.form.length).toEqual(inputFields.length)
     })
+    it('Update the store', () => {
+        for (let i = 0; i < store.form.length; i++){
+            inputFields[i].setValue("C:\\fakepath\\")
+            inputFields[i].trigger('input')
+            expect(store.form[i].value).toBe("C:\\fakepath\\")
+        }
+    })
 })
 
