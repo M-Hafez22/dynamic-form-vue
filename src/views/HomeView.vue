@@ -10,11 +10,14 @@ const store = useFormStore();
     <div v-for="item in store.form" :key="item.name">
       <div class="input">
         <input
+          v-if="item.type !== 'file'"
           type="item.type"
           v-model="item.value"
           autoComplete="off"
           required
         />
+        <input v-else type="file" />
+
         <label :style="{ top: item?.value?.length > 0 ? 0 : '' }">
           {{ item.name }}
         </label>
