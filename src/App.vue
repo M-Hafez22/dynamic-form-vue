@@ -1,9 +1,12 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { useThemeStore } from "./stores/theme";
+import ToggleTheme from "./components/ToggleTheme.vue";
+const store = useThemeStore();
 </script>
 
 <template>
-  <div class="app">
+  <div :class="[store.theme, 'app']">
     <header>
       <nav class="links">
         <RouterLink to="/">Home</RouterLink>
@@ -11,5 +14,6 @@ import { RouterLink, RouterView } from "vue-router";
       </nav>
     </header>
     <RouterView />
+    <ToggleTheme />
   </div>
 </template>
