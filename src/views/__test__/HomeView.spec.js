@@ -14,15 +14,18 @@ const wrapper = mount(HomeView, {
 const store = useFormStore()
 
 describe('Renders Home View', () => {
+    const inputFields = wrapper.findAll('input')
+    const inputLabel = wrapper.findAll('label')
     it('Renders form header', () => {
         expect(wrapper.text()).toContain('Form')
     })
     it('Renders Input label for each form item', () => {
-        const inputFields = wrapper.findAll('input')
-        const inputLabel = wrapper.findAll('label')
         for (let i = 0; i < inputFields.length; i++){
             expect(inputLabel[i].text()).toContain(`${store.form[i].name}`)
         }
+    })
+    it('Renders input field for each form item', () => {
+        expect(store.form.length).toEqual(inputFields.length)
     })
 })
 
