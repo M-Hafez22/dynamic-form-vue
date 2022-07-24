@@ -1,8 +1,24 @@
 <script setup>
+import { useFormStore } from "../stores/form";
+
+const store = useFormStore();
 </script>
 
 <template>
   <main>
-    <h1>Home</h1>
+    <h1>Form</h1>
+    <div v-for="item in store.form" :key="item.name">
+      <div class="input">
+        <input
+          type="item.type"
+          v-model="item.value"
+          autoComplete="off"
+          required
+        />
+        <label :style="{ top: item?.value?.length > 0 ? 0 : '' }">
+          {{ item.name }}
+        </label>
+      </div>
+    </div>
   </main>
 </template>
