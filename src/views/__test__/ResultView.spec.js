@@ -14,7 +14,13 @@ const wrapper = mount(ResultView, {
 const store = useFormStore()
 
 describe('Renders Result View', () => {
+    const renderedData = wrapper.findAll('p')
     it('Renders Page header', () => {
         expect(wrapper.text()).toContain('Your Form Input')
+    })
+    it('Renders p tag for each item', () => {
+        const storeItemsNamesLength = store.form.length
+        const renderedDataLenght = renderedData.length
+        expect(storeItemsNamesLength).toEqual(renderedDataLenght)
     })
 })
