@@ -23,4 +23,9 @@ describe('Renders Result View', () => {
         const renderedDataLenght = renderedData.length
         expect(storeItemsNamesLength).toEqual(renderedDataLenght)
     })
+    it('Renders Store Items', () => {
+        for (let i = 0; i < store.form.length; i++) {
+        expect(renderedData[i].text()).toContain(store.form[i].name)
+        }
+    })
 })
