@@ -9,7 +9,7 @@ export const useFormStore = defineStore({
       { name: "address", value: '', type: "text" },
       { name: "skills", value: '', type: "text" },
       { name: "password", value: '', type: "password" },
-      // { name: 'CV', value: '', type: 'file' }
+      { name: 'CV', value: '', type: 'file' }
     ]
   }),
   actions: {
