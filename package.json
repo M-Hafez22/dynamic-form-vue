@@ -7,7 +7,8 @@
     "build": "vite build",
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
-    "test:coverage": "npm run test:unit -- --coverage"
+    "test:coverage": "npm run test:unit -- --coverage",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
     "@pinia/testing": "^0.0.12",
@@ -24,6 +25,7 @@
     "sass": "^1.54.0",
     "sass-loader": "^13.0.2",
     "vite": "^3.0.1",
-    "vitest": "^0.18.1"
+    "vitest": "^0.18.1",
+    "execa": "latest"
   }
 }
