@@ -1,5 +1,5 @@
 {
-  "homepage": "/dynamic-form-vue/",
+  "homepage": "https://m-hafez22.github.io/dynamic-form-vue/",
   "name": "dynamic-form-vue",
   "version": "0.0.0",
   "scripts": {
@@ -8,7 +8,7 @@
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:coverage": "npm run test:unit -- --coverage",
-    "gh-pages-deploy": "node scripts/gh-pages-deploy.js"
+    "gh-pages-deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@pinia/testing": "^0.1.3",
@@ -23,6 +23,7 @@
     "@vue/test-utils": "^2.4.1",
     "c8": "^8.0.1",
     "execa": "latest",
+    "gh-pages": "^6.0.0",
     "jsdom": "^22.1.0",
     "sass": "^1.69.5",
     "sass-loader": "^13.3.2",

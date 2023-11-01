@@ -8,6 +8,7 @@ export default defineConfig({
   server: {
     port: 4000
   },
+  base: "/dynamic-form-vue/",
   plugins: [vue()],
   resolve: {
     alias: {
