@@ -8,7 +8,7 @@
     "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:coverage": "npm run test:unit -- --coverage",
-    "gh-pages-deploy": "gh-pages -d dist"
+    "gh-pages-deploy": "vite build && gh-pages -d dist"
   },
   "dependencies": {
     "@pinia/testing": "^0.1.3",
